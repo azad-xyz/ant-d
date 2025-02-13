@@ -1,5 +1,6 @@
 // import React from "react";
 import { Layout, Menu, MenuProps } from "antd";
+import { Outlet } from "react-router-dom";
 // import {
 //   UploadOutlined,
 //   UserOutlined,
@@ -64,7 +65,7 @@ const MainLayout = () => {
               minHeight: 360,
             }}
           >
-            <h1>main content</h1>
+            <Outlet />
           </div>
         </Content>
         <Footer style={{ textAlign: "center" }}>
