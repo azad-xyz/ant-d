@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // import { Button, Row } from "antd";
 // import { FieldValues } from "react-hook-form";
 // import { useLoginMutation } from "../redux/features/auth/authApi";
@@ -77,11 +78,6 @@ const Login = () => {
   //   },
   // });
 
-  const defaultValues = {
-    userId: "A-0002",
-    password: "admin123",
-  };
-
   const [login] = useLoginMutation();
 
   const onSubmit = async (data: FieldValues) => {
@@ -105,7 +101,7 @@ const Login = () => {
 
   return (
     <Row justify="center" align="middle" style={{ height: "100vh" }}>
-      <PHForm onSubmit={onSubmit} defaultValues={defaultValues}>
+      <PHForm onSubmit={onSubmit}>
         <PHInput type="text" name="userId" label="ID:" />
         <PHInput type="text" name="password" label="Password" />
         <Button htmlType="submit">Login</Button>
